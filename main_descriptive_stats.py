@@ -1,6 +1,6 @@
 from collections import Counter
 
-from playStats.descriptive_stats import frequency, mode, median, mean
+from playStats.descriptive_stats import frequency, mode, median, mean, rng, quartile, variance, std
 
 
 # 测试众数
@@ -32,17 +32,30 @@ def test_median(data):
 def test_mean(data):
     print('mean value is: {}'.format(mean(data)))
 
+def test_rng(data):
+    print('range value is: {}'.format(rng(data)))
+
+def test_quartile(data):
+    print('quartile value is: {}'.format(quartile(data)))
+
+def test_variance(data):
+    print('variance value is: {}'.format(variance(data)))
+
+def test_std(data):
+    print('sqt value is: {}'.format(std(data)))
+
+
 if __name__ == '__main__':
     # data = [2, 2, 2, 2, 1, 1, 1, 3, 3]
     # test_mode(data)
 
     data = [1,4,2,3]
-    test_mean(data)
+    test_std(data)
 
 
     data = [1,4,2,3, 5]
-    test_mean(data)
+    test_std(data)
 
 
     data = [1,4,2,3, 5, 99]
-    test_mean(data)
+    test_std(data)
